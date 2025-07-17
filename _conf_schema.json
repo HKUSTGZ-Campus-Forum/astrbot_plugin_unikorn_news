@@ -1,0 +1,26 @@
+{
+  "check_interval": {
+    "description": "检查论坛更新的间隔时间（分钟）",
+    "type": "int",
+    "default": 5,
+    "hint": "设置多久检查一次论坛是否有新帖子，建议不要太频繁以免给服务器造成压力"
+  },
+  "target_groups": {
+    "description": "目标QQ群列表",
+    "type": "list",
+    "default": [],
+    "hint": "需要推送新帖子的QQ群号列表，格式：[\"群号1\", \"群号2\"]"
+  },
+  "enable_notification": {
+    "description": "启用新帖推送",
+    "type": "bool",
+    "default": true,
+    "hint": "是否启用自动推送新帖子功能"
+  },
+  "max_title_length": {
+    "description": "标题最大长度",
+    "type": "int",
+    "default": 50,
+    "hint": "推送消息中标题的最大字符数，超出部分将被截断"
+  }
+}
