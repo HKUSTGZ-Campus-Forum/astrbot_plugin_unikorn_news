@@ -8,7 +8,7 @@
   "target_groups": {
     "description": "目标QQ群列表",
     "type": "list",
-    "default": [],
+    "default": ["410015005"],
     "hint": "需要推送新帖子的QQ群号列表，格式：[\"群号1\", \"群号2\"]"
   },
   "enable_notification": {
@@ -22,5 +22,41 @@
     "type": "int",
     "default": 50,
     "hint": "推送消息中标题的最大字符数，超出部分将被截断"
+  },
+  "admin_qq_list": {
+    "description": "管理员QQ列表",
+    "type": "list",
+    "default": [],
+    "hint": "可以使用高级功能（如协议端API调用）的管理员QQ号列表，格式：[\"QQ号1\", \"QQ号2\"]"
+  },
+  "min_title_length": {
+    "description": "标题最小长度",
+    "type": "int",
+    "default": 5,
+    "hint": "过滤掉标题太短的帖子，避免误识别按钮等元素"
+  },
+  "excluded_keywords": {
+    "description": "排除关键词列表",
+    "type": "list",
+    "default": ["发帖", "回复", "登录", "注册", "搜索"],
+    "hint": "包含这些关键词的标题将被过滤掉，用于排除按钮和导航链接"
+  },
+  "strict_filtering": {
+    "description": "启用严格过滤模式",
+    "type": "bool",
+    "default": true,
+    "hint": "启用更严格的帖子筛选，可以更好地过滤掉非帖子内容，但可能会漏掉一些真实帖子"
+  },
+  "debug_mode": {
+    "description": "调试模式",
+    "type": "bool",
+    "default": false,
+    "hint": "启用后会输出更详细的调试信息，用于分析网站结构变化"
+  },
+  "enable_spa_detection": {
+    "description": "启用SPA应用检测",
+    "type": "bool",
+    "default": true,
+    "hint": "自动检测单页应用（如Nuxt.js），当检测到SPA时会给出相应提示"
   }
 }
